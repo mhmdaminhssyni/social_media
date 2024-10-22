@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post List</title>
+</head>
+<body>
+    <h1>Post List</h1>
+    <ul>
+        {% for p in posts %}
+            <li><a href="/posts/{{p.pk}}/">{{p.pk}}.{{ p.title }}</a></li>
+        {% empty %}
+            <li>No posts available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

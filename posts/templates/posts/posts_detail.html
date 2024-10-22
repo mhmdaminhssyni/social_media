@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post detail</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>  <!-- Changed from posts to post -->
+    <p>{{ post.text }}</p>  <!-- Changed from posts.text to post.text -->
+    
+    <h3>Comments:</h3>
+    <ul>
+        {% for c in comments %}  <!-- Changed from comment to comments -->
+           <li>{{ c.text }}, {{ c.created_date }}</li>
+        {% empty %}
+        <p>No comments yet.</p>
+        {% endfor %}
+    </ul>
+    
+    <h5><a href="../">Back</a></h5>
+</body>
+</html>
